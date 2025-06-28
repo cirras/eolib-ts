@@ -7,6 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Support for server pub files:
+  - `DropRecord` class.
+  - `DropNpcRecord` class.
+  - `DropFile` class.
+  - `InnQuestionRecord` class.
+  - `InnRecord` class.
+  - `InnFile` class.
+  - `SkillMasterSkillRecord` class.
+  - `SkillMasterRecord` class.
+  - `SkillMasterFile` class.
+  - `ShopTradeRecord` class.
+  - `ShopCraftIngredientRecord` class.
+  - `ShopCraftRecord` class.
+  - `ShopRecord` class.
+  - `ShopFile` class.
+  - `TalkMessageRecord` class.
+  - `TalkRecord` class.
+  - `TalkFile` class.
+- `GuildTakeClientPacket.guildTag` field.
+
+### Fixed
+
+- Fix incorrect (de)serialization of `NpcAgreeServerPacket` due to the `npcs` array's length being
+  treated as a `short` instead of `char`.
+- Fix incorrect (de)serialization of `GuildTakeClientPacket` due to missing `guildTag` field.
+- Fix incorrect (de)serialization of `AvatarAdminServerPacket` due to incorrect ordering of the
+  `casterDirection` and `damage` fields.
+- Fix inaccurate (de)serialization of `JukeboxMsgClientPacket` due to the packet being treated as a
+  chunked data structure.
+
 ## [1.0.2] - 2025-06-09
 
 ### Fixed
