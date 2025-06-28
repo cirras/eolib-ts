@@ -3,7 +3,7 @@ import { CHAR_MAX, SHORT_MAX, THREE_MAX } from "./eo-numeric-limits.js";
 /**
  * Encodes a number to a sequence of bytes.
  *
- * @param number - the number to encode
+ * @param _number - the number to encode
  * @returns The encoded sequence of bytes
  */
 export function encodeNumber(_number: number): Uint8Array {
