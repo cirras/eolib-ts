@@ -1,8 +1,8 @@
 {
   "plugin": ["@shipgirl/typedoc-plugin-versions"],
+  "tsconfig": "./config/tsconfig.esm.json",
   "entryPoints": ["./src/index.ts"],
   "includeVersion": true,
   "excludeInternal": true,
-  "treatWarningsAsErrors": true,
-  "skipErrorChecking": true
+  "treatWarningsAsErrors": true
 }
