@@ -7,6 +7,61 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `SpellReplyServerPacket` packet class.
+- `SkillStatRequirements` class.
+- `PlayerEffect` class.
+- `TileEffect` class.
+- `EffectPlayerServerPacket.effects` field.
+- `EffectAgreeServerPacket.effects` field.
+- `AdminInteractTellServerPacket.goldBank` field.
+
+### Changed
+
+- Rename `QuestReportServerPacket.npcId` field to `npcIndex`.
+- Make `CastReplyServerPacket.casterTp` field optional.
+- Make `CastSpecServerPacket.casterTp` field optional.
+- Make `CastAcceptServerPacket.casterTp` field optional.
+- Make `CastAcceptServerPacket.experience` field optional.
+- Make `CastAcceptServerPacket.levelUp` field optional.
+- Make `NpcAcceptServerPacket.experience` field optional.
+- Make `NpcAcceptServerPacket.levelUp` field optional.
+- Change `TradeItemData` to represent a single player's trade items instead of both trade partners.
+- Change `TradeReplyServerPacket.tradeData` field type from `TradeItemData` to `TradeItemData[]`.
+- Change `TradeAdminServerPacket.tradeData` field type from `TradeItemData` to `TradeItemData[]`.
+- Change `TradeUseServerPacket.tradeData` field type from `TradeItemData` to `TradeItemData[]`.
+
+### Removed
+
+- `EffectPlayerServerPacket.playerId` field.
+- `EffectPlayerServerPacket.effectId` field.
+- `EffectAgreeServerPacket.coords` field.
+- `EffectAgreeServerPacket.effectId` field.
+
+### Fixed
+
+- Fix incorrect (de)serialization of `EffectPlayerServerPacket` due to only the first effect in the
+  array being recognized.
+- Fix incorrect (de)serialization of `EffectAgreeServerPacket` due to only the first effect in the
+  array being recognized.
+- Fix inaccurate serialization of `QuestAcceptClientPacket` where the char value 0 should be written
+  for `DialogReply.Ok`.
+- Fix inaccurate serialization of `AccountReplyServerPacket` where the string value "OK" should be
+  written for `AccountReply.Changed`, but "NO" was being written instead.
+- Fix inaccurate serialization of `AdminInteractTellServerPacket` where the `goldBank` field was
+  missing.
+- Fix inaccurate serialization of `RecoverPlayerServerPacket` where a trailing 0 short value was
+  missing.
+- Fix inaccurate serialization of `ShopOpenServerPacket` where a trailing break byte was erroneously
+  being written.
+- Fix inaccurate serialization of `DoorOpenServerPacket` where a trailing 0 char value was
+  erroneously being written.
+- Change incorrect `CharacterStatsInfoLookup.secondaryStats` field type from
+  `CharacterSecondaryStats` to `CharacterSecondaryStatsInfoLookup`.
+- Change incorrect `SkillLearn.statRequirements` field type from `CharacterBaseStats` to
+  `SkillStatRequirements`.
+
 ## [1.1.1] - 2025-06-28
 
 ### Fixed
