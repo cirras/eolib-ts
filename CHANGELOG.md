@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Errors when consuming the library as an ESM. ("ReferenceError: exports is not defined")
+
 ## [1.1.0] - 2025-06-28
 
 ### Added

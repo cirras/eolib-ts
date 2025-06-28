@@ -2,6 +2,7 @@
   "extends": "../tsconfig.json",
   "exclude": ["../test/**/*"],
   "compilerOptions": {
+    "module": "es6",
     "outDir": "../lib/esm",
     "declarationDir": "../lib/esm/types"
   }
