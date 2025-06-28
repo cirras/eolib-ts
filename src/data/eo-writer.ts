@@ -53,7 +53,7 @@ export class EoWriter {
   /**
    * Adds an encoded 2-byte integer to the writer data.
    *
-   * @param number - the number to encode and add
+   * @param short - the number to encode and add
    * @throws `Error` if the value is not below {@link SHORT_MAX}.
    */
   public addShort(short: number): void {
@@ -65,7 +65,7 @@ export class EoWriter {
   /**
    * Adds an encoded 3-byte integer to the writer data.
    *
-   * @param number - the number to encode and add
+   * @param three - the number to encode and add
    * @throws `Error` if the value is not below {@link THREE_MAX}.
    */
   public addThree(three: number): void {
@@ -77,7 +77,7 @@ export class EoWriter {
   /**
    * Adds an encoded 4-byte integer to the writer data.
    *
-   * @param number - the number to encode and add
+   * @param int - the number to encode and add
    * @throws `Error` if the value is not below {@link INT_MAX}.
    */
   public addInt(int: number): void {
@@ -89,7 +89,7 @@ export class EoWriter {
   /**
    * Adds a string to the writer data.
    *
-   * @param string - the string to be added
+   * @param str - the string to be added
    */
   public addString(str: string): void {
     const bytes: Uint8Array = EoWriter.encodeAnsi(str);
@@ -100,7 +100,7 @@ export class EoWriter {
   /**
    * Adds a fixed-length string to the writer data.
    *
-   * @param string - the string to be added
+   * @param str - the string to be added
    * @param length - the expected length of the string
    * @param padded - true if the string should be padded to the length with trailing `0xFF`
    *     bytes.
@@ -123,7 +123,7 @@ export class EoWriter {
   /**
    * Adds an encoded string to the writer data.
    *
-   * @param - string the string to encoded and added
+   * @param str - the string to encoded and added
    */
   public addEncodedString(str: string): void {
     const bytes: Uint8Array = EoWriter.encodeAnsi(str);
@@ -135,7 +135,7 @@ export class EoWriter {
   /**
    * Adds a fixed-length encoded string to the writer data.
    *
-   * @param string - the string to be encoded and added
+   * @param str - the string to be encoded and added
    * @param length - the expected length of the string
    * @param padded - true if the string should be padded to the length with trailing `0xFF`
    *     bytes
