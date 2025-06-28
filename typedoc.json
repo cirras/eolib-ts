@@ -1,5 +1,5 @@
 {
-  "plugin": ["typedoc-plugin-versions"],
+  "plugin": ["@shipgirl/typedoc-plugin-versions"],
   "entryPoints": ["./src/index.ts"],
   "includeVersion": true,
   "excludeInternal": true,
