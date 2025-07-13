@@ -24,4 +24,8 @@ export class Length {
   public get specified(): boolean {
     return this._string !== null;
   }
+
+  public toString(): string {
+    return this._string ?? "<unspecified>";
+  }
 }
