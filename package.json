@@ -50,7 +50,7 @@
   "homepage": "https://github.com/cirras/eolib-ts",
   "devDependencies": {
     "@rgrove/parse-xml": "^4.2.0",
-    "@shipgirl/typedoc-plugin-versions": "^0.3.1",
+    "@shipgirl/typedoc-plugin-versions": "^0.3.2",
     "@types/node": "^22.15.30",
     "@vitest/coverage-istanbul": "^3.2.2",
     "@vitest/ui": "^3.2.2",
