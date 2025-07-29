@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix inaccurate deserialization of `WelcomeReplyServerPacket` where non-chunked portions of the
+  data structure were being treated as if they were chunked.
+
 ## [2.0.0] - 2025-06-28
 
 ### Added
